@@ -1,4 +1,4 @@
-const cards = document.getElementsByClassName("card_item");
+const cards = document.getElementsByClassName("card_button");
 
 for (let card of cards) {
   console.log(card);
@@ -33,7 +33,7 @@ for (let card of cards) {
     imageWrapper.classList.add("image_wrapper");
 
     const img = document.createElement("img");
-    img.src = `assets/images/menu/${imageName}.jpg`;
+    img.src = `assets/images/menu/${imageName}.webp`;
     img.classList.add("dialog_image");
     imageWrapper.appendChild(img);
 

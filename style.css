@@ -24,7 +24,7 @@ body {
   width: 190px;
   height: 100px;
 }
-.card {
+.container {
   width: 100%;
   padding: 16px;
   display: flex;
@@ -49,7 +49,7 @@ body {
 }
 .card_image {
   width: 268px;
-  height: 268px;
+  height: 208px;
 }
 .card_details {
   padding: 0 16px 16px;
@@ -60,7 +60,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.card_details__flexSize {
+  flex: 3;
+}
 .card_button {
+  flex: 1;
   background-color: #201b32;
   color: #fff;
   padding: 6px 12px;
@@ -82,6 +86,7 @@ body {
 }
 .dialog_image {
   max-width: 400px;
+  max-height: 95%;
 }
 .image_wrapper {
   display: flex;
@@ -95,13 +100,50 @@ body {
   right: 36px;
   cursor: pointer;
 }
+.footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: transparent url("/assets/images/testimonial-bg.png") no-repeat
+    center;
+  background-size: contain;
+}
+.footer::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(32, 27, 50, 0.9);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 72px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+.footer_title {
+  color: #fff;
+  /* font-weight: bold;
+  font-size: 20px; */
+  margin-bottom: 16px;
+}
+.footer_info {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
 @media screen and (max-width: 1200px) {
-  .card {
+  .container {
     width: 900px;
   }
 }
 @media screen and (max-width: 900px) {
-  .card {
+  .container {
     width: 100%;
     padding: 0;
   }
@@ -115,7 +157,17 @@ body {
     height: 80px;
   }
   .dialog_close_icon {
-    top: 18px;
-    right: 18px;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+  }
+  .footer_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0 0;
+  }
+  .address {
+    margin-top: 24px;
   }
 }
